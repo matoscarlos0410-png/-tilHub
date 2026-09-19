@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ÚtilHub | Todo lo útil en un solo lugar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo">🌐 ÚtilHub</div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#herramientas">Herramientas</a>
+            <a href="#estudiantes">Estudiantes</a>
+            <a href="#servicios">Servicios</a>
+        </nav>
+    </header>
+
+
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>Todo lo útil,<br>en un solo lugar.</h1>
+
+            <p>
+                Herramientas, recursos y servicios para hacer
+                tu día más fácil.
+            </p>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="🔎 ¿Qué necesitas?"
+                    onkeyup="buscar()"
+                >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HERRAMIENTAS -->
+    <section class="seccion" id="herramientas">
+
+        <h2>🛠️ Herramientas útiles</h2>
+
+        <p class="descripcion">
+            Herramientas sencillas para utilizar todos los días.
+        </p>
+
+
+        <div class="grid">
+
+            <!-- CALCULADORA -->
+            <div class="card herramienta">
+
+                <div class="icono">🧮</div>
+
+                <h3>Calculadora</h3>
+
+                <p>
+                    Realiza operaciones matemáticas rápidamente.
+                </p>
+
+                <button onclick="abrirCalculadora()">
+                    Abrir
+                </button>
+
+            </div>
+
+
+            <!-- CONVERSOR -->
+            <div class="card herramienta">
+
+                <div class="icono">🔄</div>
+
+                <h3>Conversor</h3>
+
+                <p>
+                    Convierte diferentes unidades fácilmente.
+                </p>
+
+                <button onclick="abrirConversor()">
+                    Abrir
+                </button>
+
+            </div>
+
+
+            <!-- QR -->
+            <div class="card herramienta">
+
+                <div class="icono">📱</div>
+
+                <h3>Código QR</h3>
+
+                <p>
+                    Genera un código QR a partir de un texto o enlace.
+                </p>
+
+                <button onclick="abrirQR()">
+                    Abrir
+                </button>
+
+            </div>
+
+
+            <!-- TEMPORIZADOR -->
+            <div class="card herramienta">
+
+                <div class="icono">⏱️</div>
+
+                <h3>Temporizador</h3>
+
+                <p>
+                    Controla tu tiempo de manera sencilla.
+                </p>
+
+                <button onclick="abrirTemporizador()">
+                    Abrir
+                </button>
+
+            </div>
+
+
+            <!-- NOTAS -->
+            <div class="card herramienta">
+
+                <div class="icono">📝</div>
+
+                <h3>Notas</h3>
+
+                <p>
+                    Guarda notas importantes directamente en tu navegador.
+                </p>
+
+                <button onclick="abrirNotas()">
+                    Abrir
+                </button>
+
+            </div>
+
+
+            <!-- CONTRASEÑA -->
+            <div class="card herramienta">
+
+                <div class="icono">🔐</div>
+
+                <h3>Contraseña segura</h3>
+
+                <p>
+                    Genera contraseñas aleatorias para tus cuentas.
+                </p>
+
+                <button onclick="generarPassword()">
+                    Generar
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ESTUDIANTES -->
+    <section class="seccion" id="estudiantes">
+
+        <h2>📚 Para estudiantes</h2>
+
+        <p class="descripcion">
+            Recursos para organizar mejor tus estudios.
+        </p>
+
+
+        <div class="grid">
+
+            <div class="card herramienta">
+
+                <div class="icono">📅</div>
+
+                <h3>Organizador</h3>
+
+                <p>
+                    Organiza tus tareas y actividades.
+                </p>
+
+                <button onclick="abrirOrganizador()">
+                    Abrir
+                </button>
+
+            </div>
+
+
+            <div class="card herramienta">
+
+                <div class="icono">📖</div>
+
+                <h3>Diccionario</h3>
+
+                <p>
+                    Busca rápidamente el significado de palabras.
+                </p>
+
+                <button onclick="abrirDiccionario()">
+                    Buscar
+                </button>
+
+            </div>
+
+
+            <div class="card herramienta">
+
+                <div class="icono">⏰</div>
+
+                <h3>Horario</h3>
+
+                <p>
+                    Organiza tus clases y actividades.
+                </p>
+
+                <button onclick="abrirHorario()">
+                    Crear
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICIOS -->
+    <section class="seccion" id="servicios">
+
+        <h2>📍 Servicios</h2>
+
+        <p class="descripcion">
+            Encuentra información y servicios que pueden ayudarte.
+        </p>
+
+
+        <div class="grid">
+
+            <div class="card herramienta">
+
+                <div class="icono">🏪</div>
+
+                <h3>Negocios locales</h3>
+
+                <p>
+                    Encuentra tiendas y negocios de tu localidad.
+                </p>
+
+                <button onclick="abrirNegocios()">
+                    Explorar
+                </button>
+
+            </div>
+
+
+            <div class="card herramienta">
+
+                <div class="icono">🔧</div>
+
+                <h3>Servicios técnicos</h3>
+
+                <p>
+                    Busca servicios técnicos disponibles.
+                </p>
+
+                <button onclick="abrirServicios()">
+                    Explorar
+                </button>
+
+            </div>
+
+
+            <div class="card herramienta">
+
+                <div class="icono">💡</div>
+
+                <h3>Consejos útiles</h3>
+
+                <p>
+                    Consejos prácticos para la vida diaria.
+                </p>
+
+                <button onclick="abrirConsejos()">
+                    Ver consejos
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="cerrar" onclick="cerrarModal()">
+                ✕
+            </button>
+
+            <div id="contenidoModal"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <h3>🌐 ÚtilHub</h3>
+
+        <p>
+            Todo lo útil, en un solo lugar.
+        </p>
+
+        <p class="copyright">
+            © 2026 ÚtilHub
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
